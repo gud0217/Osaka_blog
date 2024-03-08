@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <title>day1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="color.js"></script>
+</head>
+
+<body>    
+    <h1>오사카</h1>
+    <input type="button" value="night" onclick="
+    nightdayhandler(this);
+    ">
+    <div id="grid">
+        <ul>
+           <li><a href="day 0.html">day 0</a></li>
+           <li><a href="day 1.html">day 1</a></li>
+           <li><a href="day 2.html">day 2</a></li>
+           <li><a href="day 3.html">day 3</a></li>
+           <li><a href="day 4.html">day 4</a></li>
+           <li><a href="day 5.html">day 5</a></li>
+        </ul>
+        <div>
+            <h2>여행 1일차</h2>
+            <div id="prag1">
+                <img src="air.jpg" alt="비행기 창문" width="300" height="300">
+                <p>비행기를 타고 가는 모습..</p>
+            </div>
+            <div id="prag2">
+                <img src="ticket.jpg" alt="티켓 사는곳" width="500" height="300">
+                <p>안제웅 : 아 그럼 난바랑 남바랑 다른건가?</p>
+                <form action="https://www.google.com/search" method="GET">
+                    <input name="q" type="text" placeholder="여기에 검색해보세요!">
+                </form>
+            </div>
+        </div>
+    </div>
+<input type="button" value="night" onclick="
+    if(self.value === 'night'){
+      document.querySelector('body').style.backgroundColor = 'black';
+     document.querySelector('body').style.color = 'white';
+      self.value = 'day';
+    }
+    else{
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        self.value = 'night';
+    }
+    ">
+</body>
+</html>
