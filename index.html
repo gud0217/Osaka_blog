@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>index page</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id"
+    content="947324145667-96c9pe889akhipmi44p3i9jmu3s1ogjv.apps.googleusercontent.com">
+    <script>
+        function onSignIn(googleUser) {
+          var profile = googleUser.getBasicProfile();
+          console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+          console.log('Name: ' + profile.getName());
+          console.log('Image URL: ' + profile.getImageUrl());
+          console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
+    </script>
+    <script>
+        function signOut() {
+          var auth2 = gapi.auth2.getAuthInstance();
+          auth2.signOut().then(function () {
+            console.log('User signed out.');
+          });
+        }
+      </script>
+</head>
+<body>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <ul>
+        <li><a href="day 0.html">day 0</a></li>
+        <li><a href="day 1.html">day 1</a></li>
+        <li><a href="day 2.html">day 2</a></li>
+        <li><a href="day 3.html">day 3</a></li>
+        <li><a href="day 4.html">day 4</a></li>
+        <li><a href="day 5.html">day 5</a></li>
+     </ul>
+     <a href="#" onclick="signOut();">Sign out</a>
+</body>
+</html>
